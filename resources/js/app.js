@@ -2,6 +2,7 @@ require('./bootstrap');
 
 import {createApp} from 'vue';
 import Welcome from './components/Welcome';
+import '../css/app.css';
 
 const app = createApp({});
 
