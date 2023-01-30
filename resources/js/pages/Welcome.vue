@@ -1,5 +1,6 @@
 <template>
   <h1 class="bg-orange-500">{{title}}</h1>
+  <router-link to="/auth">Login</router-link>
 </template>
 
 <script>

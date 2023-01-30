@@ -16,3 +16,9 @@ mix.js('resources/js/app.js', 'public/js')
         require("tailwindcss"),
     ])
   .vue();
+
+var LiveReloadPlugin = require('webpack-livereload-plugin');
+
+mix.webpackConfig({
+    // plugins: [new LiveReloadPlugin()]
+});
