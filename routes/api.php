@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::redirect('/', '/api/welcome');
+
+Route::get('/welcome', [WelcomeController::class, 'index']);
+
+Route::controller(AuthController::class)->group(function () {
+    // Route::get('/auth', 'index');
+    Route::post('/auth', 'index');
+});
+
+Route::get('/products', [ProductsController::class, 'index']);
