@@ -1,6 +1,7 @@
 <script setup>
+import ProductItemContainer from '../components/Products/ProductItemContainer.vue';
 </script>
 
 <template>
-  <h2>Products</h2>
+  <ProductItemContainer />
 </template>
